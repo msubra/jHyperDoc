@@ -1,0 +1,30 @@
+//Source file: F:\\Programs\\Java\\Eclipse\\workspace\\jHyperDoc\\web\\tar\\jHyperDoc\\jar\\HelloWorldApplet.java
+
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class HelloWorldApplet extends Applet 
+{
+   
+   /**
+    * @roseuid 40D6E893008B
+    */
+   public HelloWorldApplet() 
+   {
+    
+   }
+   
+   /**
+    * @param g1
+    * @roseuid 40D6E82D00CA
+    */
+   public void paint(Graphics g1) 
+   {
+    
+   }
+}
+/**
+ * void HelloWorldApplet.paint(){
+ *     
+ *    }
+ */

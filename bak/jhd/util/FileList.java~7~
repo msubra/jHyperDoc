@@ -1,0 +1,60 @@
+package jhd.util;
+
+import java.util.Vector;
+import java.io.File;
+
+public class FileList {
+  String dirName, filePattern;
+
+  public FileList() {
+    dirName = new String("."); // default to current directory
+    filePattern = new String("*.*"); // default to all files
+  }
+
+  public Vector getFileList(String s) {
+    String[] split = null;
+    Vector list = new Vector();
+    int i;
+
+    i = s.lastIndexOf(File.separator);
+
+    if (i >= 0) {
+      dirName = s.substring(0, i);
+      if (i < s.length() - 1) {
+        filePattern = s.substring(i + 1);
+      }
+    }
+    else {
+      filePattern = s;
+    }
+
+    System.out.println("dirname = " + dirName);
+    System.out.println("filePattern = " + filePattern);
+
+    File f = new File(dirName);
+    File[] theFiles = f.listFiles(new PatternFilter(filePattern));
+    for (i = 0; i < theFiles.length; i++) {
+      try {
+        list.add(theFiles[i].getCanonicalPath());
+      }
+      catch (Exception e) {}
+    }
+    return list;
+  }
+
+  /* splits the file path as directory name and file pattern,
+        returns the two parts
+   splitFilePath(path) => { filePattern, fileDirectory}
+   */
+
+  private String[] splitFilePath(String s) {
+    int i = s.lastIndexOf(File.separator);
+
+    if (i >= 0) {
+      return (new String[] {s.substring(i + 1), s.substring(0, i)});
+    }
+    else {
+      return (new String[] {s, null});
+    }
+  }
+}

@@ -1,0 +1,66 @@
+Option Explicit
+Dim Ws As Workspace
+Dim Db  As Database
+Dim rs As Recordset
+Dim FileName As String
+Dim i As Integer
+Private Sub Command1_Click()
+On Error GoTo a
+
+FileName = App.Path & "/" & Trim(Text1.Text)
+
+Set Ws = DBEngine.Workspaces(0)
+Set Db = Ws.CreateDatabase(FileName, dbLangGeneral)
+
+Exit Sub
+a:
+MsgBox Err.Description
+
+End Sub
+
+Private Sub Command2_Click()
+On Error GoTo a
+Dim tbl As TableDef
+OpenDb
+For Each tbl In Db.TableDefs
+List1.AddItem tbl.Name
+Next
+
+Exit Sub
+a:
+MsgBox Err.Description
+End Sub
+Private Sub Command4_Click()
+Ws.Close
+End
+End Sub
+
+Private Sub Command5_Click()
+On Error GoTo a
+Dim tblname As String
+FileName = App.Path & "/" & Trim(Text1.Text)
+OpenDb
+tblname = InputBox("Enter A Table Name To Create", "Create Table")
+Db.Execute "create table " & tblname & "(firstname TEXT)"
+Db.Close
+Exit Sub
+a:
+MsgBox Err.Description
+End Sub
+
+Sub OpenDb()
+FileName = App.Path & "/" & Trim(Text1.Text)
+Set Ws = DBEngine.Workspaces(0)
+Set Db = Ws.OpenDatabase(FileName)
+Db.Recordsets.Refresh
+End Sub
+
+Private Sub Command6_Click()
+On Error GoTo Errobj
+OpenDb
+Db.Execute ("drop table mahesh")
+Db.Close
+Exit Sub
+Errobj:
+ MsgBox Err.Description
+End Sub

@@ -1,0 +1,51 @@
+.string{
+color:#0002D0;
+font: normal 10pt "lucida console";
+}
+.chars{
+color:#0002D0;
+font: normal 10pt "lucida console";
+}
+.docComment{
+color:#0002E8;
+font: normal 8pt "lucida console";
+}
+.sourceCode{
+color:black;
+font: normal 10pt "courier";
+background-color : fff5ee;
+}
+.bracket{
+color:red;
+font: normal 10pt "lucida console";
+}
+.border{
+color:black;
+font: normal 10pt "lucida console";
+BORDER-RIGHT: #6699cc 1px solid; BORDER-TOP:#6699cc 1px solid;BORDER-LEFT:#6699cc 1px solid; BORDER-BOTTOM: #6699cc 1px solid;
+}
+.operator{
+color:gray;
+font: normal 10pt "lucida console";
+}
+.datatype{
+color:#00008B;
+font: bold 10pt "courier new";
+}
+.sourceTitle{
+color:black;
+font: bold 10pt "tahoma";
+background-color : ffcc00;
+}
+.keyword{
+color:#00008B;
+font: bold 10pt "courier new";
+}
+.number{
+color:Fuchsia;
+font: normal 10pt "lucida console";
+}
+.comment{
+color:green;
+font: italic 12pt "lucida console";
+}

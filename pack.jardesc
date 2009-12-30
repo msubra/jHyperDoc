@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+    <jar path="F:/Programs/Java/Eclipse/workspace/jHyperDoc/web/tar/jHyperDoc/jar/jHyperDoc.jar"/>
+    <options overwrite="true" compress="true" exportErrors="true"
+        exportWarnings="true" saveDescription="true"
+        descriptionLocation="/jHyperDoc/pack.jardesc"
+        useSourceFolders="false" buildIfNeeded="true"/>
+    <manifest manifestVersion="1.0" usesManifest="true"
+        reuseManifest="false" saveManifest="false"
+        generateManifest="false" manifestLocation="/jHyperDoc/Manifest.txt.txt">
+        <sealing sealJar="true">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false">
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.util"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.parser{Parser.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.color{PythonLexerTokenTypes.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.parser{CCPPParser.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.parser{PythonParser.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.color{VBLexerTokenTypes.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.parser{JavaParser.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.color{VBLexer.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.parser{ParserApp.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.parser{ConvertToHtml.java"/>
+        <folder path="/jHyperDoc/keywords"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.color{CCPPLexer.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.color{JavaLexer.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.color{CCPPLexerTokenTypes.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.parser{VBParser.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.color{PythonLexer.java"/>
+        <javaElement handleIdentifier="=jHyperDoc/src&lt;jhd.color{JavaLexerTokenTypes.java"/>
+    </selectedElements>
+</jardesc>
